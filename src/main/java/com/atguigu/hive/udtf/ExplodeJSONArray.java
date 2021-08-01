@@ -58,7 +58,9 @@ public class ExplodeJSONArray extends GenericUDTF {
     @Override
     public void process(Object[] args) throws HiveException {
         //把字符串包装为JsonArray
+
         String line = args[0].toString();
+        //将会转换为什么格式
         JSONArray array = new JSONArray(line);
 
         //遍历这个JsonArray
